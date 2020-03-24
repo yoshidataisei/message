@@ -1,0 +1,26 @@
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+      <%= link_to "情報共有サイト", titles_path, class: "navbar-brand" %>
+      
+        <form class="form-inline">
+          <%= link_to "ログアウト", logout_path, method: :delete %>
+        </form>
+</nav>
+
+<div class="title-look">
+<h1 class="user-title">質問内容一覧</h1>
+
+<%= link_to "My情報", "#", class: "btn-flat-border" %>
+
+</div>
+<%= link_to "質問を投稿する", new_title_path %>
+
+<% @titles.each do |title| %>
+
+ <ul class ="title-after">
+     
+     <li>タイトル:<%= title.title %></li>
+     <li><%= link_to "回答する", "#" %></li>
+ </ul>
+
+
+<% end %>

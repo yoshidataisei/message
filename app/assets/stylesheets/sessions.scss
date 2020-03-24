@@ -1,0 +1,22 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user-in{
+    text-align:center;
+    margin: 30px 30px;
+    padding: 10px;
+    border-bottom: medium solid #ff00ff;
+}
+
+/* sessons/new login画面 */
+.login {
+    text-align:center;
+    margin-top:100px;
+}
+
+/* sessions/new p要素 */
+.login-new-user {
+    margin-top:40px;
+    font-size:25px;
+}
