@@ -6,22 +6,25 @@
 
 <%= form_with(model: @title, local: true) do |f| %>
  
+<div class="information-new">
     <div class="form_group">
-        <%= f.label :name, "名前" %>
+        <i class="fas fa-user"></i><%= f.label :name, "名前" %>
         <%= f.text_field :name, class: 'form-control' %>
     </div>
     
     <div class="form_group">
-        <%= f.label :title, "タイトル" %>
+        <i class="fas fa-space-shuttle"></i><%= f.label :title, "タイトル" %>
         <%= f.text_field :title, class: 'form-control' %>
     </div>
    
-    <div class="form-group">
-        <%= f.label :body, "内容"%>
+    <div class="form_group">
+        <i class="far fa-question-circle"></i><%= f.label :body, "内容"%>
         <%= f.text_area :body, class: "form-control" %>
     </div>
     
         <%= f.submit "送信", class: 'btn btn-primary btn-block' %>
         <%= render 'layouts/error_messages', model: f.object %>
+</div>
+    
 <% end %>
 

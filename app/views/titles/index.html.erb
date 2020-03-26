@@ -6,10 +6,11 @@
         </form>
 </nav>
 
+
 <div class="title-look">
-<h1 class="user-title">投稿内容一覧</h1>
+   <h1 class="user-title">投稿内容一覧</h1>
   <ul class="btn-flat-border">
-      <li><%= link_to "質問を投稿する", new_title_path %></li>
+      <li><%= link_to "投稿する", new_title_path %></li>
   </ul>
 
 
@@ -18,7 +19,7 @@
 <% @titles.each do |title| %>
 
  <ul class ="title-after">
-     <li>ユーザ名前:<%= title.name %></li>
+     <li><i class="fas fa-user"></i> ユーザ名前:<%= title.name %></li>
      <li>タイトル:<%= title.title %></li>
      <li>内容： <%= title.body %></li>
  </ul>
@@ -27,4 +28,10 @@
  
 </div> 
 
-<%= paginate @titles %>
+<div class="pagenation">
+    <%= paginate @titles %>
+</div>
+
+
+  
+  
