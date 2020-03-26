@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   
-  
   root to: "toppages#index"
   
   get 'login', to: 'sessions#new'
@@ -11,5 +10,8 @@ Rails.application.routes.draw do
   
   resources :titles, only: [:index, :show, :new, :create]
   
+  resources :microposts, only: [:index, :show, :new, :create]
+  
   resources :users, only: [:index, :show, :new, :create]
+
 end

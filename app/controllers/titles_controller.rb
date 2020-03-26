@@ -1,16 +1,13 @@
 class TitlesController < ApplicationController
   def index
-    @titles = Title.order(id: :desc).page(params[:page]).per(25)
-   
+    @titles = Title.order(id: :desc).page(params[:page]).per(5)
+    
   end
 
   def show
     @title = Title.find(params[:id])
   end
 
-  def edit
-  end
-  
   def new 
     @title = Title.new
   end
@@ -26,11 +23,14 @@ class TitlesController < ApplicationController
       render :new
     end
   end
+  
+  def edit
+  end
 
   def update
   end
   
   def title_params
-    params.require(:title).permit(:title, :body)
+    params.require(:title).permit(:title, :body, :name)
   end
 end
