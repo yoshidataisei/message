@@ -13,6 +13,7 @@ class TitlesController < ApplicationController
   end
 
   def create
+    
     @title = Title.new(title_params)
     
     if @title.save
