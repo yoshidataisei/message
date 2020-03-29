@@ -1,11 +1,11 @@
 class TitlesController < ApplicationController
   def index
     @titles = Title.order(id: :desc).page(params[:page]).per(5)
-    
   end
 
   def show
     @title = Title.find(params[:id])
+    
   end
 
   def new 
